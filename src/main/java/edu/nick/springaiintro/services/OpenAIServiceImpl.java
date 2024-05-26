@@ -28,6 +28,8 @@ public class OpenAIServiceImpl implements OpenAIService {
 
     @Override
     public Answer getAnswer(Question question) {
+        System.out.println("I was called.");
+
         PromptTemplate promptTemplate = new PromptTemplate(question.question());
         Prompt prompt = promptTemplate.create();
 
